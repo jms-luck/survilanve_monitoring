@@ -132,3 +132,4 @@ document.getElementById('registrationForm').onsubmit = async function(e) {
         document.getElementById('success').textContent = 'Error submitting registration.';
     }
 };
+
