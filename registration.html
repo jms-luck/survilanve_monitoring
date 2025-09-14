@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/registration.js" defer></script>
+</head>
+<body>
+    <nav class="menubar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">New Registration</a></li>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="reports.html">Reports</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Registration</h2>
+        <form id="registrationForm" autocomplete="off">
+            <label for="collegeMail">College Mail ID</label>
+            <input type="email" id="collegeMail" name="collegeMail" required placeholder="Enter college mail ID">
+
+            <label for="rollNo">Roll No</label>
+            <input type="text" id="rollNo" name="rollNo" required placeholder="Enter roll number">
+
+            <label for="regNo">Register No</label>
+            <input type="text" id="regNo" name="regNo" required placeholder="Enter register number">
+
+            <label for="studentName">Name</label>
+            <input type="text" id="studentName" name="studentName" required placeholder="Enter name">
+
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}" placeholder="Enter phone number">
+
+            <label for="deptSection">Dept with Section</label>
+            <input type="text" id="deptSection" name="deptSection" required placeholder="e.g. CSE-A">
+
+            <label for="pepHope">PEP/HOPE</label>
+            <select id="pepHope" name="pepHope" required>
+                <option value="">Select</option>
+                <option value="PEP">PEP</option>
+                <option value="HOPE">HOPE</option>
+            </select>
+
+            <label for="year">Year</label>
+            <select id="year" name="year" required>
+                <option value="">Select year</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+            </select>
+
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter password">
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm password">
+
+            <div class="photo-capture-group">
+                <div class="photo-capture-row">
+                    <span class="photo-label">Front</span>
+                    <video id="videoFront" class="photo-preview" autoplay muted></video>
+                    <canvas id="canvasFront" class="photo-canvas" style="display:none;"></canvas>
+                    <button type="button" class="capture-btn" id="resetFront" style="background:#f44336;display:none;">Reset</button>
+                    <button type="button" class="capture-btn" id="captureFront">Capture</button>
+                </div>
+                <div class="photo-capture-row">
+                    <span class="photo-label">Left</span>
+                    <video id="videoLeft" class="photo-preview" autoplay muted></video>
+                    <canvas id="canvasLeft" class="photo-canvas" style="display:none;"></canvas>
+                    <button type="button" class="capture-btn" id="resetLeft" style="background:#f44336;display:none;">Reset</button>
+                    <button type="button" class="capture-btn" id="captureLeft">Capture</button>
+                </div>
+                <div class="photo-capture-row">
+                    <span class="photo-label">Right</span>
+                    <video id="videoRight" class="photo-preview" autoplay muted></video>
+                    <canvas id="canvasRight" class="photo-canvas" style="display:none;"></canvas>
+                    <button type="button" class="capture-btn" id="resetRight" style="background:#f44336;display:none;">Reset</button>
+                    <button type="button" class="capture-btn" id="captureRight">Capture</button>
+                </div>
+            </div>
+
+            <button type="submit">Register Student</button>
+            <div class="success" id="success"></div>
+        </form>
+    </div>
+</body>
+</html>
